@@ -9,5 +9,9 @@
 import Foundation
 
 class Donation {
+    var orgName: String = "Handicap Asso"
+    var donationTitle: String = "Donation for handicaps"
+    var targetCollection: Double = 2500.00
+    var achievedCollection: Double = 1560.00
     
 }
