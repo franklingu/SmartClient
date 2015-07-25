@@ -7,3 +7,4 @@
 //
 
 var eventsData: [Event] = []
+var eventsFilteredData: [Event] = []
