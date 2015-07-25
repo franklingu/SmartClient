@@ -17,6 +17,8 @@ class EventTableViewController: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
         
         searchBar.delegate = self
+        searchBar.showsCancelButton = true
+        searchBar.placeholder = "Search"
         loadEventsData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -40,6 +42,7 @@ class EventTableViewController: UITableViewController, UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchActive = false;
+        self.view.endEditing(true)
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
@@ -50,13 +53,13 @@ class EventTableViewController: UITableViewController, UISearchBarDelegate {
         
         eventsFilteredData.removeAll(keepCapacity: false)
         
-        searchFor(searchText)
-        
-        if eventsFilteredData.count == 0 {
+        if count(searchText) == 0 {
             searchActive = false;
         } else {
             searchActive = true;
         }
+        
+        searchFor(searchText)
         
         self.tableView.reloadData()
     }
