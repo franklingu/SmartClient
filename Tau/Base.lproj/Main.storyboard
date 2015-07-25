@@ -738,7 +738,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DonationCell" id="qJ9-xR-g3I">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DonationCell" id="qJ9-xR-g3I" customClass="DonationTableViewCell" customModule="Tau" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qJ9-xR-g3I" id="70u-1O-rb6">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -797,6 +797,13 @@
                                         <constraint firstItem="OFq-vY-0lt" firstAttribute="top" secondItem="RkR-5C-v34" secondAttribute="bottom" constant="7" id="rcN-hb-pZ8"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="donationTitle" destination="RkR-5C-v34" id="Zzt-vC-suC"/>
+                                    <outlet property="orgLogoImg" destination="fe8-4U-Hj9" id="i2u-O9-rbL"/>
+                                    <outlet property="orgName" destination="HKF-qB-4Rn" id="i6V-8B-C2P"/>
+                                    <outlet property="targetProgress" destination="EBz-Gc-hO0" id="chB-qb-6aE"/>
+                                    <outlet property="targetText" destination="hxe-ea-y1Y" id="xNs-tG-aRB"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -871,6 +878,6 @@
         <image name="moe-sg50-logo" width="166" height="166"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KXv-Ep-5Os"/>
+        <segue reference="j3D-Ck-zML"/>
     </inferredMetricsTieBreakers>
 </document>
