@@ -17,6 +17,7 @@
 		8428B0C71B6394C400B2D7BD /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428B0C61B6394C400B2D7BD /* EventDetailViewController.swift */; };
 		845F80DF1B63C69900D6D99B /* EventsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F80DE1B63C69900D6D99B /* EventsData.swift */; };
 		845F80E11B63C7A700D6D99B /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F80E01B63C7A700D6D99B /* EventTableViewCell.swift */; };
+		B129AC4D1B63DC4500B3F999 /* VolunteeringRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B129AC4C1B63DC4500B3F999 /* VolunteeringRecordsViewController.swift */; };
 		B13AB19C1B63B503008D840D /* DonationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13AB19B1B63B503008D840D /* DonationTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		8428B0C61B6394C400B2D7BD /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		845F80DE1B63C69900D6D99B /* EventsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsData.swift; sourceTree = "<group>"; };
 		845F80E01B63C7A700D6D99B /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		B129AC4C1B63DC4500B3F999 /* VolunteeringRecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolunteeringRecordsViewController.swift; sourceTree = "<group>"; };
 		B13AB19B1B63B503008D840D /* DonationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationTableViewController.swift; sourceTree = "<group>"; };
 		B13AB19F1B63C37A008D840D /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,8 +93,9 @@
 			children = (
 				B13AB19E1B63BF60008D840D /* Events */,
 				B13AB19D1B63BF40008D840D /* Donations */,
-				8428B0A21B636EEF00B2D7BD /* AppDelegate.swift */,
+				B129AC4B1B63DBE700B3F999 /* Settings */,
 				B13AB19F1B63C37A008D840D /* BridgingHeader.h */,
+				8428B0A21B636EEF00B2D7BD /* AppDelegate.swift */,
 				8428B0A61B636EEF00B2D7BD /* Main.storyboard */,
 				8428B0A91B636EEF00B2D7BD /* Images.xcassets */,
 				8428B0AB1B636EEF00B2D7BD /* LaunchScreen.xib */,
@@ -107,6 +110,14 @@
 				8428B0A11B636EEF00B2D7BD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B129AC4B1B63DBE700B3F999 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B129AC4C1B63DC4500B3F999 /* VolunteeringRecordsViewController.swift */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		B13AB19D1B63BF40008D840D /* Donations */ = {
@@ -255,6 +266,7 @@
 				B13AB19C1B63B503008D840D /* DonationTableViewController.swift in Sources */,
 				8428B0C71B6394C400B2D7BD /* EventDetailViewController.swift in Sources */,
 				845F80E11B63C7A700D6D99B /* EventTableViewCell.swift in Sources */,
+				B129AC4D1B63DC4500B3F999 /* VolunteeringRecordsViewController.swift in Sources */,
 				8428B0C31B638D0D00B2D7BD /* EventTableViewController.swift in Sources */,
 				8428B0A31B636EEF00B2D7BD /* AppDelegate.swift in Sources */,
 			);
