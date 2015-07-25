@@ -65,10 +65,28 @@ class EventTableViewController: UITableViewController, UISearchBarDelegate {
     
     func searchFor(searchText: String) {
         for i in 0..<eventsData.count {
-            if eventsData[i].desc.lowercaseString.rangeOfString(searchText) != nil {
+            if match(searchText, index: i) {
                 eventsFilteredData.append(eventsData[i])
             }
         }
+    }
+    
+    func match(searchText: String, index: Int) -> Bool {
+        let lowerSearchText = searchText.lowercaseString
+        if eventsData[index].desc.lowercaseString.rangeOfString(lowerSearchText) != nil {
+            return true
+        }
+        if eventsData[index].skills.lowercaseString.rangeOfString(lowerSearchText) != nil {
+            return true
+        }
+        if eventsData[index].orgName.lowercaseString.rangeOfString(lowerSearchText) != nil {
+            return true
+        }
+        if eventsData[index].location.lowercaseString.rangeOfString(lowerSearchText) != nil {
+            return true
+        }
+        
+        return false
     }
 
     // MARK: - Table view data source
@@ -99,6 +117,7 @@ class EventTableViewController: UITableViewController, UISearchBarDelegate {
             cell.orgLabel.text = event.orgName
             cell.dateLabel.text = event.date
             cell.numLabel.text = String(event.num)
+            cell.friendsNumLabel.text = String(event.friendsNum)
             
             return cell
         } else {
@@ -107,6 +126,7 @@ class EventTableViewController: UITableViewController, UISearchBarDelegate {
             cell.orgLabel.text = event.orgName
             cell.dateLabel.text = event.date
             cell.numLabel.text = String(event.num)
+            cell.friendsNumLabel.text = String(event.friendsNum)
             
             return cell
         }
@@ -118,11 +138,12 @@ class EventTableViewController: UITableViewController, UISearchBarDelegate {
             let indexPath: NSIndexPath = self.tableView.indexPathForCell(cell!)!
             let vc = segue.destinationViewController as? EventDetailViewController
             vc?.eventIndex = indexPath.row
+            vc?.searchActive = self.searchActive
         }
     }
     
     func loadEventsData() {
-        eventsData = [Event(desc: "NUSSU Flag&Rag 2015", orgName: "NUSSU", skills: "", num: 30, date: "7 Aug", location: "The Float @ Marina Bay"), Event(desc: "Blood Donation Drive", orgName: "RedCross Youth", skills: "", num: 10, date: "26-29 Aug", location: "NUS YIH"), Event(desc: "Supporting animal rights and welfare", orgName: "Acres", skills: "", num: 20, date: "11 Nov", location: "ACRES Wildlife Rescue Centre at 91 Jalan Lekar")]
+        eventsData = [Event(desc: "NUSSU Flag&Rag 2015", orgName: "NUSSU", skills: "", num: 30, date: "7 Aug", location: "The Float @ Marina Bay", friendsNum: 2), Event(desc: "Blood Donation Drive", orgName: "RedCross Youth", skills: "", num: 10, date: "26-29 Aug", location: "NUS YIH", friendsNum: 3), Event(desc: "Supporting animal rights and welfare", orgName: "Acres", skills: "", num: 20, date: "11 Nov", location: "ACRES Wildlife Rescue Centre at 91 Jalan Lekar", friendsNum: 1)]
         self.tableView.reloadData()
     }
 

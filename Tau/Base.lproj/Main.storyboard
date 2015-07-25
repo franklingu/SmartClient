@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BSL-bZ-Udu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BSL-bZ-Udu">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -102,22 +102,31 @@
                                                 <constraint firstAttribute="height" constant="25" id="UoZ-4X-U7B"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 friends joined!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVe-vM-tfx">
-                                            <rect key="frame" x="456" y="69" width="103" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVe-vM-tfx">
+                                            <rect key="frame" x="521" y="69" width="8" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook" translatesAutoresizingMaskIntoConstraints="NO" id="9v5-iO-UoH">
+                                            <rect key="frame" x="534" y="64" width="25" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="7di-tR-AY8"/>
+                                                <constraint firstAttribute="width" constant="25" id="daQ-6g-lQG"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="IBA-87-PXA" secondAttribute="trailing" id="0A1-xO-Qnb"/>
                                         <constraint firstItem="hnv-CE-IFk" firstAttribute="top" secondItem="EUY-jZ-A90" secondAttribute="bottom" constant="8" id="1S7-I4-FP1"/>
+                                        <constraint firstItem="hnv-CE-IFk" firstAttribute="centerY" secondItem="9v5-iO-UoH" secondAttribute="centerY" constant="-0.5" id="1hw-LT-1F9"/>
                                         <constraint firstItem="EUY-jZ-A90" firstAttribute="top" secondItem="Krn-o4-QpJ" secondAttribute="bottom" constant="7" id="2oC-mO-KcG"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="VVe-vM-tfx" secondAttribute="trailing" id="2um-Pm-2qi"/>
                                         <constraint firstItem="p6P-An-K40" firstAttribute="centerY" secondItem="hnv-CE-IFk" secondAttribute="centerY" constant="2" id="7BY-Ff-ZiI"/>
                                         <constraint firstItem="Izs-TN-Vi7" firstAttribute="top" secondItem="Krn-o4-QpJ" secondAttribute="top" constant="15" id="Ada-tU-FVW"/>
                                         <constraint firstItem="EUY-jZ-A90" firstAttribute="top" secondItem="IBA-87-PXA" secondAttribute="top" id="E9p-SF-aJV"/>
                                         <constraint firstItem="JsM-bI-lET" firstAttribute="top" secondItem="34t-wI-mlP" secondAttribute="top" id="Eoe-wk-8r7"/>
+                                        <constraint firstItem="9v5-iO-UoH" firstAttribute="leading" secondItem="VVe-vM-tfx" secondAttribute="trailing" constant="5" id="MUf-82-27d"/>
                                         <constraint firstAttribute="centerY" secondItem="Izs-TN-Vi7" secondAttribute="centerY" id="QIR-eB-SPg"/>
                                         <constraint firstItem="Krn-o4-QpJ" firstAttribute="leading" secondItem="Izs-TN-Vi7" secondAttribute="trailing" constant="15" id="Rfp-zc-Lmb"/>
                                         <constraint firstItem="EUY-jZ-A90" firstAttribute="leading" secondItem="Krn-o4-QpJ" secondAttribute="leading" id="YA3-cg-YmU"/>
@@ -130,12 +139,19 @@
                                         <constraint firstItem="p6P-An-K40" firstAttribute="leading" secondItem="JsM-bI-lET" secondAttribute="leading" id="ugL-uH-Xk7"/>
                                         <constraint firstItem="EUY-jZ-A90" firstAttribute="leading" secondItem="hnv-CE-IFk" secondAttribute="leading" id="xUw-vf-Rs9"/>
                                         <constraint firstItem="JsM-bI-lET" firstAttribute="leading" secondItem="EUY-jZ-A90" secondAttribute="trailing" constant="8" id="y1o-bz-n7v"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="9v5-iO-UoH" secondAttribute="trailing" id="ycd-gf-prA"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="2um-Pm-2qi"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="dateLabel" destination="p6P-An-K40" id="tXn-pJ-esc"/>
                                     <outlet property="descLabel" destination="Krn-o4-QpJ" id="Yh1-WA-zVS"/>
                                     <outlet property="eventImageView" destination="Izs-TN-Vi7" id="9Ew-br-nNa"/>
+                                    <outlet property="friendsNumLabel" destination="VVe-vM-tfx" id="SZM-wE-cZa"/>
                                     <outlet property="numLabel" destination="34t-wI-mlP" id="rJJ-wV-uc4"/>
                                     <outlet property="orgLabel" destination="JsM-bI-lET" id="jfG-kK-Z6l"/>
                                     <segue destination="79y-Od-j2a" kind="show" identifier="ShowEventDetail" id="sJT-tE-st2"/>
@@ -357,6 +373,7 @@
                     <connections>
                         <outlet property="dateLabel" destination="VMh-uB-aih" id="02D-3s-8PN"/>
                         <outlet property="descLabel" destination="Tf1-ng-H4x" id="YyR-11-WNc"/>
+                        <outlet property="friendsLabel" destination="eCv-DZ-HhG" id="Coh-db-Qo1"/>
                         <outlet property="locationLabel" destination="R06-AL-AzX" id="6Wv-fh-6yy"/>
                         <outlet property="numLabel" destination="hdS-PY-S93" id="3DW-YB-S2R"/>
                         <outlet property="orgLabel" destination="Ekj-B2-Zcp" id="Tx6-WB-G3T"/>
@@ -1031,6 +1048,7 @@
         <image name="Contacts Filled" width="25" height="25"/>
         <image name="Department" width="26" height="26"/>
         <image name="Donate" width="32" height="32"/>
+        <image name="Facebook" width="25" height="25"/>
         <image name="Graduation Cap" width="24" height="24"/>
         <image name="Hearts" width="100" height="100"/>
         <image name="Location Filled" width="25" height="25"/>
