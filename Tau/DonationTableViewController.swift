@@ -8,13 +8,22 @@
 
 import UIKit
 
-class DonationTableViewController: UITableViewController {
+class DonationTableViewController: UITableViewController, UISearchBarDelegate {
     var donations: [Donation] = []
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        searchBar.delegate = self
+        searchBar.showsCancelButton = true
+        searchBar.placeholder = "Search"
         self.donations = [Donation(), Donation(), Donation()]
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        self.view.endEditing(true)
+        searchBar.text = ""
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

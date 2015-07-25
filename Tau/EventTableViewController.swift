@@ -43,6 +43,8 @@ class EventTableViewController: UITableViewController, UISearchBarDelegate {
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchActive = false;
         self.view.endEditing(true)
+        self.tableView.reloadData()
+        searchBar.text = ""
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
@@ -50,16 +52,13 @@ class EventTableViewController: UITableViewController, UISearchBarDelegate {
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        eventsFilteredData.removeAll(keepCapacity: false)
-        
         if count(searchText) == 0 {
             searchActive = false;
         } else {
+            eventsFilteredData.removeAll(keepCapacity: false)
             searchActive = true;
+            searchFor(searchText)
         }
-        
-        searchFor(searchText)
         
         self.tableView.reloadData()
     }
