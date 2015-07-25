@@ -14,6 +14,8 @@
 		8428B0C31B638D0D00B2D7BD /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428B0C21B638D0D00B2D7BD /* EventTableViewController.swift */; };
 		8428B0C51B638D4700B2D7BD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428B0C41B638D4700B2D7BD /* Event.swift */; };
 		8428B0C71B6394C400B2D7BD /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428B0C61B6394C400B2D7BD /* EventDetailViewController.swift */; };
+		845F80DF1B63C69900D6D99B /* EventsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F80DE1B63C69900D6D99B /* EventsData.swift */; };
+		845F80E11B63C7A700D6D99B /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F80E01B63C7A700D6D99B /* EventTableViewCell.swift */; };
 		B13AB19C1B63B503008D840D /* DonationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13AB19B1B63B503008D840D /* DonationTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		8428B0C21B638D0D00B2D7BD /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		8428B0C41B638D4700B2D7BD /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		8428B0C61B6394C400B2D7BD /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		845F80DE1B63C69900D6D99B /* EventsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsData.swift; sourceTree = "<group>"; };
+		845F80E01B63C7A700D6D99B /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		B13AB19B1B63B503008D840D /* DonationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,7 +96,9 @@
 			children = (
 				8428B0C61B6394C400B2D7BD /* EventDetailViewController.swift */,
 				8428B0C41B638D4700B2D7BD /* Event.swift */,
+				845F80DE1B63C69900D6D99B /* EventsData.swift */,
 				8428B0C21B638D0D00B2D7BD /* EventTableViewController.swift */,
+				845F80E01B63C7A700D6D99B /* EventTableViewCell.swift */,
 			);
 			name = Events;
 			sourceTree = "<group>";
@@ -167,9 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845F80DF1B63C69900D6D99B /* EventsData.swift in Sources */,
 				8428B0C51B638D4700B2D7BD /* Event.swift in Sources */,
 				B13AB19C1B63B503008D840D /* DonationTableViewController.swift in Sources */,
 				8428B0C71B6394C400B2D7BD /* EventDetailViewController.swift in Sources */,
+				845F80E11B63C7A700D6D99B /* EventTableViewCell.swift in Sources */,
 				8428B0C31B638D0D00B2D7BD /* EventTableViewController.swift in Sources */,
 				8428B0A31B636EEF00B2D7BD /* AppDelegate.swift in Sources */,
 			);

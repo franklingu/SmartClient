@@ -10,17 +10,19 @@ import UIKit
 
 class Event: NSObject {
     var desc: String
-    var name: String
+    var orgName: String
     var skills: String
     var num: Int
     var date: String
+    var location: String
     
-    init(desc: String, name: String, skills: String, num: Int, date: String) {
+    init(desc: String, orgName: String, skills: String, num: Int, date: String, location: String) {
         self.desc = desc
-        self.name = name
+        self.orgName = orgName
         self.skills = skills
         self.num = num
         self.date = date
+        self.location = location
         super.init()
     }
 }

@@ -9,14 +9,11 @@
 import UIKit
 
 class EventTableViewController: UITableViewController {
-
-    let eventsData = [Event(desc: "", name: "", skills: "", num: 10, date: ""), Event(desc: "", name: "", skills: "", num: 10, date: ""), Event(desc: "", name: "", skills: "", num: 10, date: "")]
-    var events: [Event]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        events = eventsData
+        loadEventsData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -44,10 +41,14 @@ class EventTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("EventCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("EventCell", forIndexPath: indexPath) as! EventTableViewCell
 
         // Configure the cell...
-        let event = events[indexPath.row] as Event
+        let event = eventsData[indexPath.row] as Event
+        cell.descLabel.text = event.desc
+        cell.orgLabel.text = event.orgName
+        cell.dateLabel.text = event.date
+        cell.numLabel.text = String(event.num)
         
         return cell
     }
@@ -59,6 +60,11 @@ class EventTableViewController: UITableViewController {
             let vc = segue.destinationViewController as? EventDetailViewController
             vc?.eventIndex = indexPath.row
         }
+    }
+    
+    func loadEventsData() {
+        eventsData = [Event(desc: "NUSSU Flag&Rag 2015", orgName: "NUSSU", skills: "", num: 30, date: "7 Aug", location: "The Float @ Marina Bay"), Event(desc: "Blood Donation Drive", orgName: "Red Cross Youth-NUS Chapter", skills: "", num: 10, date: "26-29 Aug", location: "NUS YIH"), Event(desc: "Supporting animal rights and welfare", orgName: "Acres", skills: "", num: 20, date: "11 Nov", location: "ACRES Wildlife Rescue Centre at 91 Jalan Lekar")]
+        self.tableView.reloadData()
     }
 
     /*

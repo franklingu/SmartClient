@@ -10,12 +10,20 @@ import UIKit
 
 class EventDetailViewController: UIViewController {
 
+    
+    @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var orgLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var numLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    
     var eventIndex: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        loadDetails()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,6 +35,14 @@ class EventDetailViewController: UIViewController {
         let alert = UIAlertView(title: "Sign Up Successful!", message: nil, delegate: nil, cancelButtonTitle: "OK")
         
         alert.show()
+    }
+    
+    func loadDetails() {
+        self.descLabel.text = eventsData[eventIndex].desc
+        self.orgLabel.text = eventsData[eventIndex].orgName
+        self.dateLabel.text = eventsData[eventIndex].date
+        self.numLabel.text = String(eventsData[eventIndex].num)
+        self.locationLabel.text = eventsData[eventIndex].location
     }
 
     /*
