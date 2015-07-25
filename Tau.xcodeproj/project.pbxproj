@@ -15,6 +15,7 @@
 		8428B0C31B638D0D00B2D7BD /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428B0C21B638D0D00B2D7BD /* EventTableViewController.swift */; };
 		8428B0C51B638D4700B2D7BD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428B0C41B638D4700B2D7BD /* Event.swift */; };
 		8428B0C71B6394C400B2D7BD /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428B0C61B6394C400B2D7BD /* EventDetailViewController.swift */; };
+		B13AB19C1B63B503008D840D /* DonationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13AB19B1B63B503008D840D /* DonationTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8428B0C21B638D0D00B2D7BD /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		8428B0C41B638D4700B2D7BD /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		8428B0C61B6394C400B2D7BD /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		B13AB19B1B63B503008D840D /* DonationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				8428B0A21B636EEF00B2D7BD /* AppDelegate.swift */,
 				8428B0A41B636EEF00B2D7BD /* ViewController.swift */,
+				B13AB19B1B63B503008D840D /* DonationTableViewController.swift */,
 				8428B0C61B6394C400B2D7BD /* EventDetailViewController.swift */,
 				8428B0C21B638D0D00B2D7BD /* EventTableViewController.swift */,
 				8428B0C41B638D4700B2D7BD /* Event.swift */,
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8428B0C51B638D4700B2D7BD /* Event.swift in Sources */,
+				B13AB19C1B63B503008D840D /* DonationTableViewController.swift in Sources */,
 				8428B0C71B6394C400B2D7BD /* EventDetailViewController.swift in Sources */,
 				8428B0A51B636EEF00B2D7BD /* ViewController.swift in Sources */,
 				8428B0C31B638D0D00B2D7BD /* EventTableViewController.swift in Sources */,
