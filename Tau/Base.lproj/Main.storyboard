@@ -191,7 +191,7 @@
             </objects>
             <point key="canvasLocation" x="1491" y="49"/>
         </scene>
-        <!--Event Detail View Controller-->
+        <!--Event-->
         <scene sceneID="ag4-kc-6FP">
             <objects>
                 <viewController id="79y-Od-j2a" customClass="EventDetailViewController" customModule="Tau" customModuleProvider="target" sceneMemberID="viewController">
@@ -385,10 +385,64 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Event" id="S2u-cM-aDq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0dK-IV-aWb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2229" y="49"/>
+        </scene>
+        <!--Scan-->
+        <scene sceneID="sAb-YS-8WD">
+            <objects>
+                <viewController id="dgE-fM-59F" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wjA-IC-IrB"/>
+                        <viewControllerLayoutGuide type="bottom" id="dA1-L8-KTV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F2E-3c-jTc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCJ-qs-GrJ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ZCJ-qs-GrJ" secondAttribute="bottom" id="9Rc-nN-pqo"/>
+                            <constraint firstItem="ZCJ-qs-GrJ" firstAttribute="top" secondItem="wjA-IC-IrB" secondAttribute="bottom" id="M4f-OC-0i9"/>
+                            <constraint firstAttribute="trailing" secondItem="ZCJ-qs-GrJ" secondAttribute="trailing" id="nIh-r2-w35"/>
+                            <constraint firstItem="ZCJ-qs-GrJ" firstAttribute="leading" secondItem="F2E-3c-jTc" secondAttribute="leading" id="rBH-64-b6I"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Scan" id="xtt-vf-SF0"/>
+                    <connections>
+                        <segue destination="aHy-wO-lMG" kind="show" identifier="pushToDonationFromScan" id="KXv-Ep-5Os"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QEk-Xm-EfM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2229" y="753"/>
+        </scene>
+        <!--Donation-->
+        <scene sceneID="6Jn-iJ-lRM">
+            <objects>
+                <viewController id="aHy-wO-lMG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N1a-au-Psr"/>
+                        <viewControllerLayoutGuide type="bottom" id="b4f-Re-ddU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fuL-0x-HdZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Donation" id="BBq-HH-QUS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OjR-Cw-fKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2229" y="1452"/>
         </scene>
         <!--Settings-->
         <scene sceneID="GdR-Pj-0yX">
@@ -510,7 +564,7 @@
                                         </label>
                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EBz-Gc-hO0">
                                             <rect key="frame" x="103" y="86" width="422" height="2"/>
-                                            <color key="progressTintColor" red="0.02832073723" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="progressTintColor" red="1" green="0.0032034207469999998" blue="0.030151334110000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </progressView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2500" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxe-ea-y1Y">
                                             <rect key="frame" x="532" y="79" width="35" height="15"/>
@@ -544,8 +598,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Donations" id="Tzt-zT-QXw">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="H6U-uZ-0Mg"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="H6U-uZ-0Mg">
+                            <connections>
+                                <segue destination="dgE-fM-59F" kind="show" id="rza-0y-rss"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="aHy-wO-lMG" kind="show" identifier="pushToDonationFromTable" id="j3D-Ck-zML"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LU8-8d-EwF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -601,4 +662,7 @@
         <image name="Volunteering" width="32" height="32"/>
         <image name="moe-sg50-logo" width="166" height="166"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="KXv-Ep-5Os"/>
+    </inferredMetricsTieBreakers>
 </document>
