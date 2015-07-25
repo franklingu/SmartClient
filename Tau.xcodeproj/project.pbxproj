@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8428B0A31B636EEF00B2D7BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428B0A21B636EEF00B2D7BD /* AppDelegate.swift */; };
-		8428B0A51B636EEF00B2D7BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428B0A41B636EEF00B2D7BD /* ViewController.swift */; };
 		8428B0A81B636EEF00B2D7BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8428B0A61B636EEF00B2D7BD /* Main.storyboard */; };
 		8428B0AA1B636EEF00B2D7BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8428B0A91B636EEF00B2D7BD /* Images.xcassets */; };
 		8428B0AD1B636EEF00B2D7BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8428B0AB1B636EEF00B2D7BD /* LaunchScreen.xib */; };
@@ -22,7 +21,6 @@
 		8428B09D1B636EEF00B2D7BD /* Tau.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tau.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8428B0A11B636EEF00B2D7BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8428B0A21B636EEF00B2D7BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8428B0A41B636EEF00B2D7BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8428B0A71B636EEF00B2D7BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8428B0A91B636EEF00B2D7BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8428B0AC1B636EEF00B2D7BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -62,12 +60,9 @@
 		8428B09F1B636EEF00B2D7BD /* Tau */ = {
 			isa = PBXGroup;
 			children = (
+				B13AB19E1B63BF60008D840D /* Events */,
+				B13AB19D1B63BF40008D840D /* Donations */,
 				8428B0A21B636EEF00B2D7BD /* AppDelegate.swift */,
-				8428B0A41B636EEF00B2D7BD /* ViewController.swift */,
-				B13AB19B1B63B503008D840D /* DonationTableViewController.swift */,
-				8428B0C61B6394C400B2D7BD /* EventDetailViewController.swift */,
-				8428B0C21B638D0D00B2D7BD /* EventTableViewController.swift */,
-				8428B0C41B638D4700B2D7BD /* Event.swift */,
 				8428B0A61B636EEF00B2D7BD /* Main.storyboard */,
 				8428B0A91B636EEF00B2D7BD /* Images.xcassets */,
 				8428B0AB1B636EEF00B2D7BD /* LaunchScreen.xib */,
@@ -82,6 +77,24 @@
 				8428B0A11B636EEF00B2D7BD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B13AB19D1B63BF40008D840D /* Donations */ = {
+			isa = PBXGroup;
+			children = (
+				B13AB19B1B63B503008D840D /* DonationTableViewController.swift */,
+			);
+			name = Donations;
+			sourceTree = "<group>";
+		};
+		B13AB19E1B63BF60008D840D /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				8428B0C61B6394C400B2D7BD /* EventDetailViewController.swift */,
+				8428B0C41B638D4700B2D7BD /* Event.swift */,
+				8428B0C21B638D0D00B2D7BD /* EventTableViewController.swift */,
+			);
+			name = Events;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,7 +170,6 @@
 				8428B0C51B638D4700B2D7BD /* Event.swift in Sources */,
 				B13AB19C1B63B503008D840D /* DonationTableViewController.swift in Sources */,
 				8428B0C71B6394C400B2D7BD /* EventDetailViewController.swift in Sources */,
-				8428B0A51B636EEF00B2D7BD /* ViewController.swift in Sources */,
 				8428B0C31B638D0D00B2D7BD /* EventTableViewController.swift in Sources */,
 				8428B0A31B636EEF00B2D7BD /* AppDelegate.swift in Sources */,
 			);
