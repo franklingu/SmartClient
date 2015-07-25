@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BSL-bZ-Udu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BSL-bZ-Udu">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -30,7 +30,7 @@
             </objects>
             <point key="canvasLocation" x="-191" y="417"/>
         </scene>
-        <!--Smart Charity-->
+        <!--Events-->
         <scene sceneID="1rG-Ob-6ce">
             <objects>
                 <tableViewController id="Z5c-mD-7cm" customClass="EventTableViewController" customModule="Tau" customModuleProvider="target" sceneMemberID="viewController">
@@ -185,7 +185,7 @@
                             <outlet property="delegate" destination="Z5c-mD-7cm" id="JN4-SR-TDD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Smart Charity" id="Mbb-Fn-Orv"/>
+                    <navigationItem key="navigationItem" title="Events" id="Mbb-Fn-Orv"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eYi-OM-sUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -401,7 +401,60 @@
             </objects>
             <point key="canvasLocation" x="2229" y="49"/>
         </scene>
-        <!--Smart Charity-->
+        <!--Scan-->
+        <scene sceneID="sAb-YS-8WD">
+            <objects>
+                <viewController id="dgE-fM-59F" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wjA-IC-IrB"/>
+                        <viewControllerLayoutGuide type="bottom" id="dA1-L8-KTV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F2E-3c-jTc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCJ-qs-GrJ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ZCJ-qs-GrJ" secondAttribute="bottom" id="9Rc-nN-pqo"/>
+                            <constraint firstItem="ZCJ-qs-GrJ" firstAttribute="top" secondItem="wjA-IC-IrB" secondAttribute="bottom" id="M4f-OC-0i9"/>
+                            <constraint firstAttribute="trailing" secondItem="ZCJ-qs-GrJ" secondAttribute="trailing" id="nIh-r2-w35"/>
+                            <constraint firstItem="ZCJ-qs-GrJ" firstAttribute="leading" secondItem="F2E-3c-jTc" secondAttribute="leading" id="rBH-64-b6I"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Scan" id="xtt-vf-SF0"/>
+                    <connections>
+                        <segue destination="aHy-wO-lMG" kind="show" identifier="pushToDonationFromScan" id="KXv-Ep-5Os"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QEk-Xm-EfM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2229" y="753"/>
+        </scene>
+        <!--Donation-->
+        <scene sceneID="6Jn-iJ-lRM">
+            <objects>
+                <viewController id="aHy-wO-lMG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N1a-au-Psr"/>
+                        <viewControllerLayoutGuide type="bottom" id="b4f-Re-ddU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fuL-0x-HdZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Donation" id="BBq-HH-QUS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OjR-Cw-fKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2221" y="1400"/>
+        </scene>
+        <!--Settings-->
         <scene sceneID="GdR-Pj-0yX">
             <objects>
                 <tableViewController id="7TP-rz-duN" sceneMemberID="viewController">
@@ -454,7 +507,7 @@
                             <outlet property="delegate" destination="7TP-rz-duN" id="j4n-rD-BgY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Smart Charity" id="tT2-Ra-zBO"/>
+                    <navigationItem key="navigationItem" title="Settings" id="tT2-Ra-zBO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3L-Vm-gDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -542,7 +595,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gaq-yH-RKe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2229" y="1580"/>
+            <point key="canvasLocation" x="2215" y="2160"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Yaf-yB-hgn">
@@ -631,7 +684,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yay-0Y-T1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2229" y="2296"/>
+            <point key="canvasLocation" x="2203" y="2840"/>
         </scene>
         <!--Events-->
         <scene sceneID="wC1-OI-2xM">
@@ -652,7 +705,7 @@
             </objects>
             <point key="canvasLocation" x="679" y="49"/>
         </scene>
-        <!--Smart Charity-->
+        <!--Donations-->
         <scene sceneID="Ppz-DF-DYY">
             <objects>
                 <tableViewController id="TD9-jd-gxR" customClass="DonationTableViewController" customModule="Tau" customModuleProvider="target" sceneMemberID="viewController">
@@ -727,7 +780,16 @@
                             <outlet property="delegate" destination="TD9-jd-gxR" id="Yie-WU-DQo"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Smart Charity" id="Tzt-zT-QXw"/>
+                    <navigationItem key="navigationItem" title="Donations" id="Tzt-zT-QXw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="H6U-uZ-0Mg">
+                            <connections>
+                                <segue destination="dgE-fM-59F" kind="show" id="rza-0y-rss"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="aHy-wO-lMG" kind="show" identifier="pushToDonationFromTable" id="j3D-Ck-zML"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LU8-8d-EwF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
