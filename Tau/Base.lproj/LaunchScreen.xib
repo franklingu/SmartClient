@@ -12,16 +12,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="383-zO-VbA">
-                    <rect key="frame" x="175" y="150" width="180" height="180"/>
+                    <rect key="frame" x="120" y="120" width="240" height="240"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="383-zO-VbA" secondAttribute="height" multiplier="1:1" id="wfk-Z4-f25"/>
-                        <constraint firstAttribute="width" constant="180" id="xM6-xl-3Dh"/>
+                        <constraint firstAttribute="width" constant="240" id="xM6-xl-3Dh"/>
                     </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="0.0032034207469999998" blue="0.030151334110000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="383-zO-VbA" secondAttribute="centerX" constant="-25" id="1l2-W9-TW8"/>
+                <constraint firstAttribute="centerX" secondItem="383-zO-VbA" secondAttribute="centerX" id="1l2-W9-TW8"/>
                 <constraint firstAttribute="centerY" secondItem="383-zO-VbA" secondAttribute="centerY" id="2lk-so-rxV"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -30,6 +30,6 @@
         </view>
     </objects>
     <resources>
-        <image name="AppLogo" width="621" height="428"/>
+        <image name="AppLogo" width="532" height="428"/>
     </resources>
 </document>

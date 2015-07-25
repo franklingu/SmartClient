@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BSL-bZ-Udu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BSL-bZ-Udu">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -425,7 +425,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bET-iQ-R88">
-                                <rect key="frame" x="16" y="100" width="568" height="354"/>
+                                <rect key="frame" x="16" y="100" width="568" height="349"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WOo-fs-JuB">
                                         <rect key="frame" x="0.0" y="0.0" width="568" height="41"/>
@@ -480,7 +480,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0h-Vr-U4o">
-                                <rect key="frame" x="16" y="454" width="568" height="33"/>
+                                <rect key="frame" x="16" y="449" width="568" height="33"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Donate">
@@ -493,7 +493,7 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="bET-iQ-R88" secondAttribute="trailing" id="0Uo-IW-l9D"/>
                             <constraint firstItem="bET-iQ-R88" firstAttribute="bottom" secondItem="D0h-Vr-U4o" secondAttribute="top" id="7xR-Lr-y1w"/>
-                            <constraint firstItem="b4f-Re-ddU" firstAttribute="top" secondItem="D0h-Vr-U4o" secondAttribute="bottom" id="BKK-oY-7yd"/>
+                            <constraint firstItem="b4f-Re-ddU" firstAttribute="top" secondItem="D0h-Vr-U4o" secondAttribute="bottom" constant="5" id="BKK-oY-7yd"/>
                             <constraint firstItem="bET-iQ-R88" firstAttribute="top" secondItem="hab-fv-RNW" secondAttribute="bottom" id="Hb3-Ir-4J6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="D0h-Vr-U4o" secondAttribute="trailing" id="JTi-jd-te0"/>
                             <constraint firstAttribute="trailing" secondItem="hab-fv-RNW" secondAttribute="trailing" id="PzL-OG-lEd"/>
