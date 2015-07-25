@@ -23,6 +23,11 @@ class EventDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func signupTapped(sender: UIButton) {
+        let alert = UIAlertView(title: "Sign Up Successful!", message: nil, delegate: nil, cancelButtonTitle: "OK")
+        
+        alert.show()
+    }
 
     /*
     // MARK: - Navigation
