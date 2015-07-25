@@ -12,21 +12,10 @@
 		8428B0A81B636EEF00B2D7BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8428B0A61B636EEF00B2D7BD /* Main.storyboard */; };
 		8428B0AA1B636EEF00B2D7BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8428B0A91B636EEF00B2D7BD /* Images.xcassets */; };
 		8428B0AD1B636EEF00B2D7BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8428B0AB1B636EEF00B2D7BD /* LaunchScreen.xib */; };
-		8428B0B91B636EEF00B2D7BD /* TauTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428B0B81B636EEF00B2D7BD /* TauTests.swift */; };
 		8428B0C31B638D0D00B2D7BD /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428B0C21B638D0D00B2D7BD /* EventTableViewController.swift */; };
 		8428B0C51B638D4700B2D7BD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428B0C41B638D4700B2D7BD /* Event.swift */; };
 		8428B0C71B6394C400B2D7BD /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428B0C61B6394C400B2D7BD /* EventDetailViewController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		8428B0B31B636EEF00B2D7BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8428B0951B636EEF00B2D7BD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8428B09C1B636EEF00B2D7BD;
-			remoteInfo = Tau;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8428B09D1B636EEF00B2D7BD /* Tau.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tau.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,9 +25,6 @@
 		8428B0A71B636EEF00B2D7BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8428B0A91B636EEF00B2D7BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8428B0AC1B636EEF00B2D7BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		8428B0B21B636EEF00B2D7BD /* TauTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TauTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8428B0B71B636EEF00B2D7BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8428B0B81B636EEF00B2D7BD /* TauTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TauTests.swift; sourceTree = "<group>"; };
 		8428B0C21B638D0D00B2D7BD /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		8428B0C41B638D4700B2D7BD /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		8428B0C61B6394C400B2D7BD /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
@@ -52,13 +38,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8428B0AF1B636EEF00B2D7BD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -66,7 +45,6 @@
 			isa = PBXGroup;
 			children = (
 				8428B09F1B636EEF00B2D7BD /* Tau */,
-				8428B0B51B636EEF00B2D7BD /* TauTests */,
 				8428B09E1B636EEF00B2D7BD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				8428B09D1B636EEF00B2D7BD /* Tau.app */,
-				8428B0B21B636EEF00B2D7BD /* TauTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,23 +81,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8428B0B51B636EEF00B2D7BD /* TauTests */ = {
-			isa = PBXGroup;
-			children = (
-				8428B0B81B636EEF00B2D7BD /* TauTests.swift */,
-				8428B0B61B636EEF00B2D7BD /* Supporting Files */,
-			);
-			path = TauTests;
-			sourceTree = "<group>";
-		};
-		8428B0B61B636EEF00B2D7BD /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8428B0B71B636EEF00B2D7BD /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,24 +101,6 @@
 			productReference = 8428B09D1B636EEF00B2D7BD /* Tau.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8428B0B11B636EEF00B2D7BD /* TauTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8428B0BF1B636EEF00B2D7BD /* Build configuration list for PBXNativeTarget "TauTests" */;
-			buildPhases = (
-				8428B0AE1B636EEF00B2D7BD /* Sources */,
-				8428B0AF1B636EEF00B2D7BD /* Frameworks */,
-				8428B0B01B636EEF00B2D7BD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8428B0B41B636EEF00B2D7BD /* PBXTargetDependency */,
-			);
-			name = TauTests;
-			productName = TauTests;
-			productReference = 8428B0B21B636EEF00B2D7BD /* TauTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -170,10 +112,6 @@
 				TargetAttributes = {
 					8428B09C1B636EEF00B2D7BD = {
 						CreatedOnToolsVersion = 6.3.1;
-					};
-					8428B0B11B636EEF00B2D7BD = {
-						CreatedOnToolsVersion = 6.3.1;
-						TestTargetID = 8428B09C1B636EEF00B2D7BD;
 					};
 				};
 			};
@@ -191,7 +129,6 @@
 			projectRoot = "";
 			targets = (
 				8428B09C1B636EEF00B2D7BD /* Tau */,
-				8428B0B11B636EEF00B2D7BD /* TauTests */,
 			);
 		};
 /* End PBXProject section */
@@ -204,13 +141,6 @@
 				8428B0A81B636EEF00B2D7BD /* Main.storyboard in Resources */,
 				8428B0AD1B636EEF00B2D7BD /* LaunchScreen.xib in Resources */,
 				8428B0AA1B636EEF00B2D7BD /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8428B0B01B636EEF00B2D7BD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,23 +159,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8428B0AE1B636EEF00B2D7BD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8428B0B91B636EEF00B2D7BD /* TauTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8428B0B41B636EEF00B2D7BD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8428B09C1B636EEF00B2D7BD /* Tau */;
-			targetProxy = 8428B0B31B636EEF00B2D7BD /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8428B0A61B636EEF00B2D7BD /* Main.storyboard */ = {
@@ -370,40 +284,6 @@
 			};
 			name = Release;
 		};
-		8428B0C01B636EEF00B2D7BD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TauTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tau.app/Tau";
-			};
-			name = Debug;
-		};
-		8428B0C11B636EEF00B2D7BD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TauTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tau.app/Tau";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -421,15 +301,6 @@
 			buildConfigurations = (
 				8428B0BD1B636EEF00B2D7BD /* Debug */,
 				8428B0BE1B636EEF00B2D7BD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8428B0BF1B636EEF00B2D7BD /* Build configuration list for PBXNativeTarget "TauTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8428B0C01B636EEF00B2D7BD /* Debug */,
-				8428B0C11B636EEF00B2D7BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
