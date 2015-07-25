@@ -8,11 +8,15 @@
 
 import UIKit
 
-class EventTableViewController: UITableViewController {
+class EventTableViewController: UITableViewController, UISearchBarDelegate {
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    var searchActive: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchBar.delegate = self
         loadEventsData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -24,6 +28,45 @@ class EventTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchActive = true;
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        eventsFilteredData.removeAll(keepCapacity: false)
+        
+        searchFor(searchText)
+        
+        if eventsFilteredData.count == 0 {
+            searchActive = false;
+        } else {
+            searchActive = true;
+        }
+        
+        self.tableView.reloadData()
+    }
+    
+    func searchFor(searchText: String) {
+        for i in 0..<eventsData.count {
+            if eventsData[i].desc.lowercaseString.rangeOfString(searchText) != nil {
+                eventsFilteredData.append(eventsData[i])
+            }
+        }
     }
 
     // MARK: - Table view data source
@@ -37,20 +80,34 @@ class EventTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return eventsData.count
+        if searchActive {
+            return eventsFilteredData.count
+        } else {
+            return eventsData.count
+        }
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("EventCell", forIndexPath: indexPath) as! EventTableViewCell
 
         // Configure the cell...
-        let event = eventsData[indexPath.row] as Event
-        cell.descLabel.text = event.desc
-        cell.orgLabel.text = event.orgName
-        cell.dateLabel.text = event.date
-        cell.numLabel.text = String(event.num)
-        
-        return cell
+        if searchActive {
+            let event = eventsFilteredData[indexPath.row] as Event
+            cell.descLabel.text = event.desc
+            cell.orgLabel.text = event.orgName
+            cell.dateLabel.text = event.date
+            cell.numLabel.text = String(event.num)
+            
+            return cell
+        } else {
+            let event = eventsData[indexPath.row] as Event
+            cell.descLabel.text = event.desc
+            cell.orgLabel.text = event.orgName
+            cell.dateLabel.text = event.date
+            cell.numLabel.text = String(event.num)
+            
+            return cell
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -63,7 +120,7 @@ class EventTableViewController: UITableViewController {
     }
     
     func loadEventsData() {
-        eventsData = [Event(desc: "NUSSU Flag&Rag 2015", orgName: "NUSSU", skills: "", num: 30, date: "7 Aug", location: "The Float @ Marina Bay"), Event(desc: "Blood Donation Drive", orgName: "Red Cross Youth-NUS Chapter", skills: "", num: 10, date: "26-29 Aug", location: "NUS YIH"), Event(desc: "Supporting animal rights and welfare", orgName: "Acres", skills: "", num: 20, date: "11 Nov", location: "ACRES Wildlife Rescue Centre at 91 Jalan Lekar")]
+        eventsData = [Event(desc: "NUSSU Flag&Rag 2015", orgName: "NUSSU", skills: "", num: 30, date: "7 Aug", location: "The Float @ Marina Bay"), Event(desc: "Blood Donation Drive", orgName: "Red Cross Youth", skills: "", num: 10, date: "26-29 Aug", location: "NUS YIH"), Event(desc: "Supporting animal rights and welfare", orgName: "Acres", skills: "", num: 20, date: "11 Nov", location: "ACRES Wildlife Rescue Centre at 91 Jalan Lekar")]
         self.tableView.reloadData()
     }
 
