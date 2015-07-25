@@ -478,18 +478,34 @@
                                 <rect key="frame" x="16" y="0.0" width="568" height="60"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hearts" translatesAutoresizingMaskIntoConstraints="NO" id="shj-rH-oQY">
-                                        <rect key="frame" x="35" y="0.0" width="60" height="60"/>
+                                        <rect key="frame" x="45" y="0.0" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="shj-rH-oQY" secondAttribute="height" multiplier="1:1" id="VVv-aH-0ex"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rl-Eh-3Ne">
+                                        <rect key="frame" x="64" y="18" width="22" height="23"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours served" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPr-ea-h75">
+                                        <rect key="frame" x="135" y="18" width="110" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="shj-rH-oQY" firstAttribute="leading" secondItem="ARj-cr-fDj" secondAttribute="leading" constant="35" id="Ms0-UB-Gjh"/>
+                                    <constraint firstItem="iPr-ea-h75" firstAttribute="centerY" secondItem="0rl-Eh-3Ne" secondAttribute="centerY" id="BQo-vn-bnM"/>
+                                    <constraint firstItem="shj-rH-oQY" firstAttribute="leading" secondItem="ARj-cr-fDj" secondAttribute="leading" constant="45" id="Ms0-UB-Gjh"/>
+                                    <constraint firstItem="iPr-ea-h75" firstAttribute="leading" secondItem="shj-rH-oQY" secondAttribute="trailing" constant="30" id="Ptx-bF-bgN"/>
                                     <constraint firstItem="shj-rH-oQY" firstAttribute="top" secondItem="ARj-cr-fDj" secondAttribute="top" id="RCg-cB-jty"/>
                                     <constraint firstAttribute="bottom" secondItem="shj-rH-oQY" secondAttribute="bottom" id="iIM-fH-SzT"/>
+                                    <constraint firstItem="shj-rH-oQY" firstAttribute="centerX" secondItem="0rl-Eh-3Ne" secondAttribute="centerX" id="jPw-rP-qxd"/>
                                     <constraint firstAttribute="height" constant="60" id="kRJ-aR-NSS"/>
+                                    <constraint firstItem="shj-rH-oQY" firstAttribute="centerY" secondItem="0rl-Eh-3Ne" secondAttribute="centerY" constant="0.5" id="kXF-at-1BJ"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oyg-D1-RVx">
@@ -847,7 +863,7 @@
         <image name="Department" width="26" height="26"/>
         <image name="Donate" width="32" height="32"/>
         <image name="Graduation Cap" width="24" height="24"/>
-        <image name="Hearts" width="50" height="50"/>
+        <image name="Hearts" width="100" height="100"/>
         <image name="Location Filled" width="25" height="25"/>
         <image name="Planner" width="26" height="26"/>
         <image name="Settings Filled" width="32" height="32"/>
