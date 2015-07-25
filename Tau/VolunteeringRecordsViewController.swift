@@ -22,7 +22,7 @@ class VolunteeringRecordsViewController: UIViewController {
         let xLabelsSource = ["Feb", "Mar", "Apr", "May", "Jun", "Jul"]
         let lineChart = PNLineChart(frame: self.chartViewFrame.frame)
         lineChart.setXLabels(xLabelsSource, withWidth: self.chartViewFrame.frame.width / CGFloat(xLabelsSource.count) - 10.0)
-        let data1Source = [4, 2.5, 5.5, 4.2, 7.3, 2.5]
+        let data1Source = [4, 2.5, 5.5, 4.7, 2.5, 7.3]
         let data1 = PNLineChartData()
         data1.color = UIColor.redColor()
         data1.itemCount = UInt(xLabelsSource.count)
