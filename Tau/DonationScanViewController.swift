@@ -39,12 +39,20 @@ class DonationScanViewController: UIViewController {
     }
     
     func processQrcodeReading() {
+        var index = 1
         var hud = MBProgressHUD.showHUDAddedTo(self.navigationController!.view, animated: true)
         hud.labelText = "Loading"
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.7 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
             MBProgressHUD.hideAllHUDsForView(self.navigationController!.view, animated: true)
-            self.performSegueWithIdentifier("pushToDonationFromScan", sender: Donation())
+            self.performSegueWithIdentifier("pushToDonationFromScan", sender: DonationsManager.getSharedDonationsManager().donations[index])
         })
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "pushToDonationFromScan" {
+            let destVC = segue.destinationViewController as! DonationDetailsViewController
+            destVC.donation = sender as? Donation
+        }
     }
 }

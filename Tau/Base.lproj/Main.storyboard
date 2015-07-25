@@ -209,8 +209,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description..." lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tf1-ng-H4x">
-                                <rect key="frame" x="156" y="70" width="428" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="156" y="70" width="428" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -404,7 +404,7 @@
         <!--Donation-->
         <scene sceneID="6Jn-iJ-lRM">
             <objects>
-                <viewController id="aHy-wO-lMG" sceneMemberID="viewController">
+                <viewController id="aHy-wO-lMG" customClass="DonationDetailsViewController" customModule="Tau" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N1a-au-Psr"/>
                         <viewControllerLayoutGuide type="bottom" id="b4f-Re-ddU"/>
@@ -422,9 +422,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hab-fv-RNW">
                                 <rect key="frame" x="16" y="53" width="584" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description..." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMP-fn-Hqg">
-                                        <rect key="frame" x="120" y="10" width="464" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description..." lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMP-fn-Hqg">
+                                        <rect key="frame" x="120" y="10" width="464" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -529,6 +529,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Donation" id="BBq-HH-QUS"/>
+                    <connections>
+                        <outlet property="collectionProgress" destination="3gR-Lc-f7t" id="HVp-WY-1TX"/>
+                        <outlet property="collectionTarget" destination="6PT-VO-inG" id="gfu-4Q-WZy"/>
+                        <outlet property="donationDesc" destination="rMP-fn-Hqg" id="Skv-CC-SpS"/>
+                        <outlet property="donationTitle" destination="p17-OJ-vIo" id="Orq-hm-qyO"/>
+                        <outlet property="orgLogoImg" destination="XOo-tG-m9c" id="zQX-tt-9Fz"/>
+                        <outlet property="orgName" destination="I3H-Sp-gMR" id="AxW-Vc-vYp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OjR-Cw-fKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1032,6 +1040,6 @@
         <image name="moe-sg50-logo" width="166" height="166"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="j3D-Ck-zML"/>
+        <segue reference="KXv-Ep-5Os"/>
     </inferredMetricsTieBreakers>
 </document>

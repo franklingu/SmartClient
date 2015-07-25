@@ -18,7 +18,7 @@ class DonationTableViewController: UITableViewController, UISearchBarDelegate {
         searchBar.delegate = self
         searchBar.showsCancelButton = true
         searchBar.placeholder = "Search"
-        self.donations = [Donation(), Donation(), Donation()]
+        self.donations = DonationsManager.getSharedDonationsManager().donations
     }
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
@@ -49,5 +49,12 @@ class DonationTableViewController: UITableViewController, UISearchBarDelegate {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let donation = self.donations[indexPath.row]
         self.performSegueWithIdentifier("pushToDonationFromTable", sender: donation)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "pushToDonationFromTable" {
+            let destVC = segue.destinationViewController as! DonationDetailsViewController
+            destVC.donation = sender as? Donation
+        }
     }
 }
