@@ -122,7 +122,7 @@ class EventTableViewController: UITableViewController, UISearchBarDelegate {
     }
     
     func loadEventsData() {
-        eventsData = [Event(desc: "NUSSU Flag&Rag 2015", orgName: "NUSSU", skills: "", num: 30, date: "7 Aug", location: "The Float @ Marina Bay"), Event(desc: "Blood Donation Drive", orgName: "Red Cross Youth", skills: "", num: 10, date: "26-29 Aug", location: "NUS YIH"), Event(desc: "Supporting animal rights and welfare", orgName: "Acres", skills: "", num: 20, date: "11 Nov", location: "ACRES Wildlife Rescue Centre at 91 Jalan Lekar")]
+        eventsData = [Event(desc: "NUSSU Flag&Rag 2015", orgName: "NUSSU", skills: "", num: 30, date: "7 Aug", location: "The Float @ Marina Bay"), Event(desc: "Blood Donation Drive", orgName: "RedCross Youth", skills: "", num: 10, date: "26-29 Aug", location: "NUS YIH"), Event(desc: "Supporting animal rights and welfare", orgName: "Acres", skills: "", num: 20, date: "11 Nov", location: "ACRES Wildlife Rescue Centre at 91 Jalan Lekar")]
         self.tableView.reloadData()
     }
 
