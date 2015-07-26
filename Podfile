@@ -5,4 +5,5 @@ target 'Tau' do
     pod 'PNChart'
     pod 'MTBBarcodeScanner'
     pod 'MBProgressHUD'
+    pod 'Alamofire'
 end

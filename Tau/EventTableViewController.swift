@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class EventTableViewController: UITableViewController, UISearchBarDelegate {
     
@@ -149,9 +150,46 @@ class EventTableViewController: UITableViewController, UISearchBarDelegate {
     
     func loadEventsData() {
         eventsData = [Event(title: "Endless Love", desc: "This is a special fund raising event benefitting Action for AIDS (AFA) Singapore. Proceeds from this event will be used to fund educational, care and welfare programmes. The event will mobilise business and community support to stop the spread of HIV infection and AIDS and to lessen the impact of the infection in Singapore.", orgName: "Action For AIDS", skills: "Fund Raiser", num: 50, date: "25 July", location: "Ang Mo Kio", friendsNum: 6, logoName: "afa"), Event(title: "Volunteer as Mentor", desc: "Babes Pregnancy Crisis Support Limited envisions a more inclusive society where every pregnant teenager needing support will not feel estranged or marginalised.", orgName: "Babes", skills: "Mentor, Mother", num: 8, date: "Long term", location: "26 Jalan Klinik, #01-42/52, Singapore 160026", friendsNum: 0, logoName: "babes"), Event(title: "Volunteer for Outreach", desc: "Babes Pregnancy Crisis Support Limited envisions a more inclusive society where every pregnant teenager needing support will not feel estranged or marginalised", orgName: "Babes", skills: "Publicity", num: 12, date: "Long term", location: "26 Jalan Klinik, #01-42/52, Singapore 160026", friendsNum: 0, logoName: "babes"), Event(title: "Refurbishing 2 Homes", desc: "Blessed Grace Social Services’ members have been helping and assisting the poor and elderly in Chai Chee, Block 23/24 since 2010.", orgName: "BGSS", skills: "Shift Household items", num: 8, date: "1 Aug", location: "Chai Chee Blk 23/24, Bedok", friendsNum: 1, logoName: "bless"), Event(title: "Group Sharing Sessions", desc: "Blessed Grace Social Services launched the “Narcotics Addiction Support Group” on 9th April 2015. We started with 20 members, half of which are recovering addicts and the other half counsellors and volunteers. It was a good start and we had sharing, testimonies and prayers.", orgName: "BGSS", skills: "Sharing, Councelling", num: 5, date: "Every Thur", location: "18, Arumugam Road. #05-01, Antioch@MacPherson", friendsNum: 0, logoName: "bless"), Event(title: "NUSSU Flag&Rag 2015", desc: "", orgName: "NUSSU", skills: "", num: 30, date: "7 Aug", location: "The Float @ Marina Bay", friendsNum: 2, logoName: "rag"), Event(title: "Blood Donation Drive", desc: "", orgName: "RedCross Youth", skills: "", num: 10, date: "26-29 Aug", location: "NUS YIH", friendsNum: 3, logoName: "redcross"), Event(title: "Supporting animal rights and welfare", desc: "", orgName: "Acres", skills: "", num: 20, date: "11 Nov", location: "ACRES Wildlife Rescue Centre at 91 Jalan Lekar", friendsNum: 1, logoName: "animal")]
-        self.tableView.reloadData()
+        loadEventsFromServer()
     }
 
+    func loadEventsFromServer() {
+        Alamofire.request(.GET, "https://cryptic-reaches-9053.herokuapp.com/events", parameters: nil).responseJSON { _, _, JSON, error in
+            println(error)
+            if let dummy = error {
+                println("load")
+                let jsonResponse = JSON as! [NSDictionary]
+                var event: NSDictionary
+                var title: String
+                var desc: String
+                var orgName: String
+                var skills: String
+                var num: Int
+                var friends: Int
+                var date: String
+                var location: String
+                var orgImgName: String
+                var newEvent: Event
+                
+                for i in 0..<jsonResponse.count {
+                    event = jsonResponse[i]
+                    title = event.valueForKeyPath("eventTitle") as! String
+                    desc = event.valueForKeyPath("eventDesc") as! String
+                    orgName = event.valueForKeyPath("orgName") as! String
+                    skills = event.valueForKeyPath("skills") as! String
+                    num = event.valueForKeyPath("numNeeded") as! Int
+                    friends = event.valueForKeyPath("numFirends") as! Int
+                    date = event.valueForKeyPath("eventDate") as! String
+                    location = event.valueForKeyPath("eventLocation") as! String
+                    orgImgName = event.valueForKeyPath("orgImgName") as! String
+                    newEvent = Event(title: title, desc: desc, orgName: orgName, skills: skills, num: num, date: date, location: location, friendsNum: friends, logoName: orgImgName)
+                    eventsData.append(newEvent)
+                }
+            }
+            self.tableView.reloadData()
+        }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
