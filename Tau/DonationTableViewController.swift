@@ -39,6 +39,7 @@ class DonationTableViewController: UITableViewController, UISearchBarDelegate {
         let donation = self.donations[indexPath.row]
         
         cell.orgName.text = donation.orgName
+        cell.orgLogoImg.image = UIImage(named: donation.orgImgName)
         cell.donationTitle.text = donation.donationTitle
         cell.targetProgress.progress = Float(donation.achievedCollection / donation.targetCollection)
         cell.targetText.text = String(format:"$%.0f", donation.targetCollection)

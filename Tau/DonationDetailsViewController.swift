@@ -24,6 +24,7 @@ class DonationDetailsViewController: UIViewController {
         if self.donation != nil {
             self.donationTitle.text = self.donation!.donationTitle
             self.orgName.text = self.donation!.orgName
+            self.orgLogoImg.image = UIImage(named: self.donation!.orgImgName)
             self.donationDesc.text = self.donation!.donationDesc
             self.collectionProgress.progress = Float(self.donation!.achievedCollection / self.donation!.targetCollection)
             self.collectionTarget.text = String(format:"$%.0f", self.donation!.targetCollection)
