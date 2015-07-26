@@ -56,7 +56,7 @@ class DonationsManager {
         self.donations[4].orgImgName = "sg_heart_foundation"
         self.donations[4].donationTitle = "Care for heart"
         self.donations[4].donationDesc = "Care for heart and start now"
-        self.donations[4].targetCollection = 4400000
+        self.donations[4].targetCollection = 440000
         self.donations[4].achievedCollection = 330000
     }
 }
