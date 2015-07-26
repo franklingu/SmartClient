@@ -11,6 +11,7 @@ import UIKit
 class EventDetailViewController: UIViewController {
 
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var orgLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -41,6 +42,7 @@ class EventDetailViewController: UIViewController {
     
     func loadDetails() {
         if !searchActive {
+            self.titleLabel.text = eventsData[eventIndex].title
             self.descLabel.text = eventsData[eventIndex].desc
             self.orgLabel.text = eventsData[eventIndex].orgName
             self.dateLabel.text = eventsData[eventIndex].date
@@ -48,6 +50,7 @@ class EventDetailViewController: UIViewController {
             self.locationLabel.text = eventsData[eventIndex].location
             self.friendsLabel.text = String(eventsData[eventIndex].friendsNum) + " of your friends has joined this event!"
         } else {
+            self.titleLabel.text = eventsFilteredData[eventIndex].title
             self.descLabel.text = eventsFilteredData[eventIndex].desc
             self.orgLabel.text = eventsFilteredData[eventIndex].orgName
             self.dateLabel.text = eventsFilteredData[eventIndex].date
