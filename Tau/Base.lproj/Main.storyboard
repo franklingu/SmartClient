@@ -664,8 +664,14 @@
                                     <constraint firstItem="shj-rH-oQY" firstAttribute="centerY" secondItem="0rl-Eh-3Ne" secondAttribute="centerY" constant="0.5" id="kXF-at-1BJ"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gray-line" translatesAutoresizingMaskIntoConstraints="NO" id="i8d-xN-eqN">
+                                <rect key="frame" x="0.0" y="60" width="600" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0C1-pT-CTU"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oyg-D1-RVx">
-                                <rect key="frame" x="16" y="80" width="568" height="426"/>
+                                <rect key="frame" x="16" y="90" width="568" height="426"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="oyg-D1-RVx" secondAttribute="height" multiplier="4:3" id="ZhS-CD-Y9u"/>
@@ -674,12 +680,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="oyg-D1-RVx" firstAttribute="top" secondItem="i8d-xN-eqN" secondAttribute="bottom" id="2QR-7P-7pI"/>
                             <constraint firstItem="ARj-cr-fDj" firstAttribute="leading" secondItem="HI4-Rf-Pz3" secondAttribute="leadingMargin" id="9HL-Ck-Mht"/>
-                            <constraint firstItem="oyg-D1-RVx" firstAttribute="top" secondItem="ARj-cr-fDj" secondAttribute="bottom" constant="20" id="C5N-KD-OJi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oyg-D1-RVx" secondAttribute="trailing" id="REg-RR-qYA"/>
                             <constraint firstItem="oyg-D1-RVx" firstAttribute="leading" secondItem="HI4-Rf-Pz3" secondAttribute="leadingMargin" id="gIa-3c-oQE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ARj-cr-fDj" secondAttribute="trailing" id="iM0-D3-XOP"/>
+                            <constraint firstItem="i8d-xN-eqN" firstAttribute="leading" secondItem="HI4-Rf-Pz3" secondAttribute="leading" id="mEK-F2-3Kd"/>
+                            <constraint firstItem="i8d-xN-eqN" firstAttribute="top" secondItem="ARj-cr-fDj" secondAttribute="bottom" id="q56-x5-qKA"/>
                             <constraint firstItem="ARj-cr-fDj" firstAttribute="top" secondItem="hgc-TU-GiO" secondAttribute="bottom" id="tWg-zD-Grv"/>
+                            <constraint firstAttribute="trailing" secondItem="i8d-xN-eqN" secondAttribute="trailing" id="vXI-LZ-pLN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Records" id="iu5-wC-ypV"/>
@@ -1037,6 +1046,7 @@
         <image name="Planner" width="26" height="26"/>
         <image name="Settings Filled" width="32" height="32"/>
         <image name="Volunteering" width="32" height="32"/>
+        <image name="gray-line" width="877" height="300"/>
         <image name="moe-sg50-logo" width="166" height="166"/>
     </resources>
     <inferredMetricsTieBreakers>
