@@ -18,6 +18,8 @@ class EventDetailViewController: UIViewController {
     @IBOutlet weak var numLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var friendsLabel: UILabel!
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var skillsLabel: UILabel!
     
     var eventIndex: Int!
     var searchActive: Bool = false
@@ -49,6 +51,8 @@ class EventDetailViewController: UIViewController {
             self.numLabel.text = String(eventsData[eventIndex].num)
             self.locationLabel.text = eventsData[eventIndex].location
             self.friendsLabel.text = String(eventsData[eventIndex].friendsNum) + " of your friends has joined this event!"
+            self.logoImageView.image = UIImage(named: eventsData[eventIndex].logoName)
+            self.skillsLabel.text = eventsData[eventIndex].skills
         } else {
             self.titleLabel.text = eventsFilteredData[eventIndex].title
             self.descLabel.text = eventsFilteredData[eventIndex].desc
@@ -57,6 +61,8 @@ class EventDetailViewController: UIViewController {
             self.numLabel.text = String(eventsFilteredData[eventIndex].num)
             self.locationLabel.text = eventsFilteredData[eventIndex].location
             self.friendsLabel.text = String(eventsFilteredData[eventIndex].friendsNum) + " of your friends has joined this event!"
+            self.logoImageView.image = UIImage(named: eventsFilteredData[eventIndex].logoName)
+            self.skillsLabel.text = eventsFilteredData[eventIndex].skills
         }
     }
 
